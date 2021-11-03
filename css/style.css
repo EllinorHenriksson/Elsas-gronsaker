@@ -1,0 +1,41 @@
+@charset "UTF-8";
+
+html {
+    font-size: 16px;
+}
+
+html, body {
+    height: 100%;
+}
+
+/* Kolla om nedanstående element faktiskt finns representerade på sidorna */
+html, body, nav, header, main, aside, footer, section, div, figure {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f7f5ee;
+    color: #000000;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+header img {
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+#globalNav {
+    display: flex;
+    flex-direction: row;
+}
+
+#globalNav, #localNavVeg, #localNavBox {
+    list-style: none;
+    
+}
