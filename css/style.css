@@ -33,9 +33,95 @@ header img {
 #globalNav {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    position: relative;
 }
 
 #globalNav, #localNavVeg, #localNavBox {
     list-style: none;
-    
+    margin: 0;
+    padding: 0;
 }
+
+#localNavVeg, #localNavBox {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    background-color: #e6dec5;
+    padding: 0.5rem
+}
+
+#globalNav li {
+    font-size: 1.2rem;
+}
+
+#localNavVeg li, #localNavBox li {
+    font-size: 1.1rem;
+    padding: 0.5rem;
+}
+
+#localNavVeg {
+    width: 155px;
+}
+
+#localNavBox {
+    width: 152px;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+nav a:link, nav a:visited {
+    color: #000000;
+}
+
+#globalNav a.thisPage {
+    font-weight: bold;
+    color: #467562;
+}
+
+nav a:hover, nav a:active {
+    color: #467562;
+}
+
+.dropDown ul {
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.5s;
+}
+
+.dropDown:hover ul {
+    transform: scaleY(1);
+}
+
+#boldgreen {
+    font-weight: bold;
+    color: #467562;
+}
+
+
+/*Media queries*/
+/* FORTSÄTT HÄR!!! */
+@media screen and (max-width: 800px) {
+    #globalNav {
+        flex-direction: column;
+        gap: 2rem;
+        
+    }
+    #localNavVeg, #localNavBox {
+        
+        background-color: #e6dec5;
+        padding: 0.5rem
+    }
+}
+
+/*
+Färgpalett:
+Ljusbeige: #f7f5ee;
+Mörkbeige: #e6dec5;
+Ljusgrön: #5fa085;
+Mörkgrön: #467562;
+*/
+
+
