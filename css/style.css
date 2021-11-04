@@ -51,6 +51,10 @@ header img {
     padding: 0.5rem
 }
 
+.dropDown > a:after {
+    content: ' \25BE';
+  }
+
 #globalNav li {
     font-size: 1.2rem;
 }
@@ -100,28 +104,97 @@ nav a:hover, nav a:active {
     color: #467562;
 }
 
+#menucheckbox, #menuicon {
+    display: none;
+}
 
 /*Media queries*/
-/* FORTSÄTT HÄR!!! */
+
+/*Navigering*/
 @media screen and (max-width: 800px) {
     #globalNav {
         flex-direction: column;
-        gap: 2rem;
-        
+        gap: 1.5rem;
+        justify-content: flex-start;
+        position: static;
     }
+
+    .dropDown ul {
+        transform: none;
+    }
+
     #localNavVeg, #localNavBox {
-        
-        background-color: #e6dec5;
-        padding: 0.5rem
+        position: static;
+        background-color: #f7f5ee;
+        padding: 0rem;        
+    }
+
+    #localNavVeg li, #localNavBox li {
+        padding: 0.3rem;
+    }
+
+    .dropDown > a:after {
+        content: '';
+      }
+}
+
+/*Navigering*/
+@media screen and (max-width: 600px) {
+    #menuicon {
+    display: block;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+    }
+
+    #menuicon::after {
+        content: ' \002B';
+    }
+
+    #globalNav {
+        text-align: center;
+    }
+    
+    #localNavVeg, #localNavBox {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #menucheckbox ~ ul {
+        transform: scaleY(0);
+        transform-origin: top;
+        transition: transform 0.5s;
+        position: absolute;
+        left: 0;
+        right: 0;
+    }
+    
+    #menucheckbox:checked ~ ul {
+        transform: scaleY(1);
+        position: static;
+    }
+
+    #menucheckbox:checked ~ #menuicon::after {
+        content: ' \00D7';
     }
 }
 
+
 /*
-Färgpalett:
+Färgpalett
 Ljusbeige: #f7f5ee;
 Mörkbeige: #e6dec5;
 Ljusgrön: #5fa085;
 Mörkgrön: #467562;
+*/
+
+/*
+Entiteter
+Liten pil upp: 25B4
+Liten pil ned: 25BE
+Stor pil ned: 25BC
+Kryss: 00D7
 */
 
 
