@@ -110,8 +110,60 @@ nav a:hover, nav a:active {
     display: none;
 }
 
+/* Stil för main */
+main > div {
+    width: 100%;
+    padding: 2rem 1rem 1rem 1rem;
+}
+
+main div picture img {
+    max-width: 100%;
+    display: block;
+}
+
+main h1, main h2, main h3, main p {
+    text-align: center;
+}
+
+main h1 {
+    color: #467562;
+}
+
+section {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: space-evenly;
+}
+
+section div {
+    position: relative;
+    max-width: 250px;
+}
+
+section img {
+    max-width: 100%;
+}
+
+#banner {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    background-color: hsla(47, 36%, 95%, 0.692);
+}
+
+#banner p {
+    font-weight: bold;
+    color: #103526;
+    text-align: center;
+}
+
 /* Stil för footer */
 footer {
+    margin-top: 3rem;
     background-color: #e6dec5;
     position: relative;
     height: 100px;
@@ -137,6 +189,7 @@ footer a:link, footer a:visited {
 }
 
 footer a:hover, footer a:active {
+    background-color: #49635a;
     color: #ffffff;
     box-shadow: -5px -5px 5px #808080;
 }
@@ -151,7 +204,7 @@ footer img {
 
 /*Media queries*/
 
-/*Navigering*/
+/*Navigering och layout*/
 @media screen and (max-width: 800px) {
     #globalNav {
         flex-direction: column;
@@ -176,10 +229,36 @@ footer img {
 
     .dropDown > a:after {
         content: '';
-      }
+    }
+
+    body {
+        display: grid;
+        grid-template-columns: 3fr 7fr;
+        grid-template-rows: auto auto auto;
+        grid-template-areas:
+        "header header"
+        "nav main"
+        "footer footer";
+    }
+
+    header {
+        grid-area: header;
+    }
+
+    nav {
+        grid-area: nav;
+    }
+
+    main {
+        grid-area: main;
+    }
+
+    footer {
+        grid-area: footer;
+    }
 }
 
-/*Navigering*/
+/*Navigering och layout*/
 @media screen and (max-width: 600px) {
     #menuicon {
     display: block;
@@ -219,6 +298,10 @@ footer img {
     #menucheckbox:checked ~ #menuicon::after {
         content: ' \00D7';
     }
+
+    body {
+        display: block;
+    }
 }
 
 /*Footer*/
@@ -250,7 +333,8 @@ Färgpalett
 Ljusbeige: #f7f5ee;
 Mörkbeige: #e6dec5;
 Ljusgrön: #5fa085;
-Mörkgrön: #467562;
+Mellangrön: #467562;
+Mörkgrön: #103526;
 */
 
 /*
