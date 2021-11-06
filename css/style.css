@@ -30,6 +30,8 @@ header img {
     margin: 0 auto;
 }
 
+/* Stil för navigering */
+
 #globalNav {
     display: flex;
     flex-direction: row;
@@ -53,7 +55,7 @@ header img {
 
 .dropDown > a:after {
     content: ' \25BE';
-  }
+}
 
 #globalNav li {
     font-size: 1.2rem;
@@ -106,6 +108,45 @@ nav a:hover, nav a:active {
 
 #menucheckbox, #menuicon {
     display: none;
+}
+
+/* Stil för footer */
+footer {
+    background-color: #e6dec5;
+    position: relative;
+    height: 100px;
+}
+
+footer a {
+    display: inline-block;
+    position: absolute;
+    left: 2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 1rem;
+    background-color: #467562;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 50px;
+    box-shadow: 5px 5px 5px #808080;
+}
+
+footer a:link, footer a:visited {
+    color: #ffffff;
+}
+
+footer a:hover, footer a:active {
+    color: #ffffff;
+    box-shadow: -5px -5px 5px #808080;
+}
+
+footer img {
+    width: 150px;
+    position: absolute;
+    right: 2rem;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 /*Media queries*/
@@ -177,6 +218,29 @@ nav a:hover, nav a:active {
 
     #menucheckbox:checked ~ #menuicon::after {
         content: ' \00D7';
+    }
+}
+
+/*Footer*/
+@media screen and (max-width: 400px) {
+    footer {
+        position: static;
+        height: 185px;
+    }
+
+    footer a {
+        position: static;
+        margin-left: 50%;
+        margin-top: 2rem;
+        transform: translateX(-50%);
+    }
+
+    footer img {
+        position: static;
+        display: block;
+        margin-left: 50%;
+        margin-top: 1rem;
+        transform: translateX(-50%);
     }
 }
 
