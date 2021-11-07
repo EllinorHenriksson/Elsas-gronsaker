@@ -111,12 +111,12 @@ nav a:hover, nav a:active {
 }
 
 /* Stil för main */
-main > div {
+div#startimg {
     width: 100%;
     padding: 2rem 1rem 1rem 1rem;
 }
 
-main div picture img {
+#startimg picture img {
     max-width: 100%;
     display: block;
 }
@@ -125,8 +125,18 @@ main h1, main h2, main h3, main p {
     text-align: center;
 }
 
-main h1 {
+main h1, main h2 {
     color: #467562;
+}
+
+.text {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.2rem;
+    line-height: 2rem;
+}
+
+#underbar {
+    font-size: 1.4rem;
 }
 
 section {
@@ -161,9 +171,47 @@ section img {
     text-align: center;
 }
 
+#elsa img {
+    max-width: 100%;
+    float: right;
+    margin: 2rem;
+}
+
+#imgcontainer {
+    width: 100%;
+    text-align: center;
+}
+
+#imgcontainer img {
+    max-width: 70%;
+    margin: 0.5rem;
+}
+
+#imgcontainer figcaption {
+    margin-bottom: 1.5rem;
+}
+
+#containerspring {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#containerspring div {
+    width: 200px;
+    height: 300px;
+    background-color: #c5ddd3;
+    display: inline-block;
+    margin: 0.5rem;
+}
+
+#containerspring div img {
+    max-width: 100%;
+}
+
 /* Stil för footer */
 footer {
-    margin-top: 3rem;
+    margin-top: 1rem;
     background-color: #e6dec5;
     position: relative;
     height: 100px;
@@ -181,7 +229,7 @@ footer a {
     text-decoration: none;
     font-weight: bold;
     border-radius: 50px;
-    box-shadow: 5px 5px 5px #808080;
+    box-shadow: 5px 5px 5px #301616;
 }
 
 footer a:link, footer a:visited {
@@ -200,6 +248,38 @@ footer img {
     right: 2rem;
     top: 50%;
     transform: translateY(-50%);
+}
+
+/*Layout*/
+body {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas:
+    "header header"
+    "nav nav"
+    "main aside"
+    "footer footer";
+}
+
+header {
+    grid-area: header;
+}
+
+nav {
+    grid-area: nav;
+}
+
+main {
+    grid-area: main;
+}
+
+footer {
+    grid-area: footer;
+}
+
+aside {
+    grid-area: aside;
 }
 
 /*Media queries*/
@@ -232,29 +312,26 @@ footer img {
     }
 
     body {
-        display: grid;
-        grid-template-columns: 3fr 7fr;
-        grid-template-rows: auto auto auto;
+        grid-template-columns: 50px auto auto 50px;
+        grid-template-rows: auto auto auto auto;
         grid-template-areas:
-        "header header"
-        "nav main"
-        "footer footer";
+        "header header header header"
+        ". nav main ."
+        ". nav aside ."
+        "footer footer footer footer";
     }
 
-    header {
-        grid-area: header;
+    #elsa img {
+        float: none;
+        margin: 1rem;
     }
 
-    nav {
-        grid-area: nav;
+    #containerelsa {
+        text-align: center;
     }
 
-    main {
-        grid-area: main;
-    }
-
-    footer {
-        grid-area: footer;
+    #imgcontainer img {
+        max-width: 90%;
     }
 }
 
