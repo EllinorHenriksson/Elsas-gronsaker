@@ -209,6 +209,51 @@ section img {
     max-width: 100%;
 }
 
+#containershop {
+    text-align: center;
+    padding: 1rem 2rem;
+}
+
+#containershop img {
+    max-width: 100%;
+}
+
+.aside {
+    border-radius: 20px;
+    padding: 1rem;
+    margin: 1rem;
+    background-color: #e6dec5;
+    width: 250px;
+}
+
+.aside h3, .aside p {
+    color: #103526;
+    text-align: center;
+}
+
+#map {
+    margin: 1rem;
+    width: 250px;
+    height: 250px;
+}
+
+#map iframe {
+    width: 100%;
+    height: 100%;
+}
+
+.inlinelink {
+    text-decoration:none;
+}
+
+.inlinelink:link, .inlinelink:visited {
+    color: #467562;
+}
+
+.inlinelink:hover, .inlinelink:active {
+    color: #5fa085;
+}
+
 /* Stil för footer */
 footer {
     margin-top: 1rem;
@@ -332,6 +377,16 @@ aside {
 
     #imgcontainer img {
         max-width: 90%;
+    }
+
+    #containershop {
+        padding: 1rem 1rem;
+    }
+
+    aside {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 }
 
