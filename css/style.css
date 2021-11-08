@@ -171,12 +171,6 @@ section img {
     text-align: center;
 }
 
-#elsa img {
-    max-width: 100%;
-    float: right;
-    margin: 2rem;
-}
-
 #imgcontainer {
     width: 100%;
     text-align: center;
@@ -191,13 +185,13 @@ section img {
     margin-bottom: 1.5rem;
 }
 
-#containerspring {
+#vegcontainer {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 
-#containerspring div {
+#vegcontainer div {
     width: 200px;
     height: 300px;
     background-color: #c5ddd3;
@@ -205,7 +199,7 @@ section img {
     margin: 0.5rem;
 }
 
-#containerspring div img {
+#vegcontainer div img {
     max-width: 100%;
 }
 
@@ -252,6 +246,43 @@ section img {
 
 .inlinelink:hover, .inlinelink:active {
     color: #5fa085;
+}
+
+.floatcontainer {
+    float: right;
+}
+
+.floatcontainer img {
+    max-width: 100%;
+    margin: 1rem;
+}
+
+#orderbutton {
+    padding: 1rem;
+    background-color: #467562;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 50px;
+    box-shadow: 5px 5px 5px #301616;
+    margin: 2rem auto;
+    display: block;
+    width: max-content;
+    font-size: 1.3rem;
+}
+    
+#orderbutton:link, #orderbutton:visited {
+    color: #ffffff;
+}
+    
+#orderbutton:hover, #orderbutton:active {
+    background-color: #49635a;
+    color: #ffffff;
+    box-shadow: -5px -5px 5px #808080;
+}
+
+#clear {
+    clear: right;
 }
 
 /* Stil för footer */
@@ -366,15 +397,6 @@ aside {
         "footer footer footer footer";
     }
 
-    #elsa img {
-        float: none;
-        margin: 1rem;
-    }
-
-    #containerelsa {
-        text-align: center;
-    }
-
     #imgcontainer img {
         max-width: 90%;
     }
@@ -388,6 +410,11 @@ aside {
         flex-wrap: wrap;
         justify-content: center;
     }
+
+    .floatcontainer {
+        float: none;
+        text-align: center;
+    }
 }
 
 /*Navigering och layout*/
@@ -398,6 +425,7 @@ aside {
     font-size: 1.2rem;
     font-weight: bold;
     text-align: center;
+    margin-bottom: 1rem;
     }
 
     #menuicon::after {
