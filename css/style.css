@@ -37,6 +37,7 @@ header img {
     flex-direction: row;
     justify-content: space-between;
     position: relative;
+    white-space: nowrap;
 }
 
 #globalNav, #localNavVeg, #localNavBox {
@@ -111,12 +112,12 @@ nav a:hover, nav a:active {
 }
 
 /* Stil för main */
-div#startimg {
+#startcontainer {
     width: 100%;
     padding: 2rem 1rem 1rem 1rem;
 }
 
-#startimg picture img {
+#startcontainer picture img {
     max-width: 100%;
     display: block;
 }
@@ -171,27 +172,27 @@ section img {
     text-align: center;
 }
 
-#imgcontainer {
+#aboutcontainer {
     width: 100%;
     text-align: center;
 }
 
-#imgcontainer img {
+#aboutcontainer img {
     max-width: 70%;
     margin: 0.5rem;
 }
 
-#imgcontainer figcaption {
+#aboutcontainer figcaption {
     margin-bottom: 1.5rem;
 }
 
-#vegcontainer {
+.vegcontainer {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 
-#vegcontainer div {
+.vegcontainer div {
     width: 200px;
     height: 300px;
     background-color: #c5ddd3;
@@ -199,16 +200,16 @@ section img {
     margin: 0.5rem;
 }
 
-#vegcontainer div img {
+.vegcontainer div img {
     max-width: 100%;
 }
 
-#containershop {
+#shopcontainer {
     text-align: center;
-    padding: 1rem 2rem;
+    padding: 1rem;
 }
 
-#containershop img {
+#shopcontainer img {
     max-width: 100%;
 }
 
@@ -257,25 +258,25 @@ section img {
     margin: 1rem;
 }
 
-#orderbutton {
+#orderlink {
     padding: 1rem;
     background-color: #467562;
     color: #ffffff;
     text-decoration: none;
     font-weight: bold;
     border-radius: 50px;
-    box-shadow: 5px 5px 5px #301616;
+    box-shadow: 5px 5px 5px #808080;
     margin: 2rem auto;
     display: block;
     width: max-content;
     font-size: 1.3rem;
 }
     
-#orderbutton:link, #orderbutton:visited {
+#orderlink:link, #orderlink:visited {
     color: #ffffff;
 }
     
-#orderbutton:hover, #orderbutton:active {
+#orderlink:hover, #orderlink:active {
     background-color: #49635a;
     color: #ffffff;
     box-shadow: -5px -5px 5px #808080;
@@ -284,6 +285,64 @@ section img {
 #clear {
     clear: right;
 }
+
+form {
+    margin: 2rem;
+}
+
+fieldset {
+    background-color: #e6dec5;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    white-space: nowrap;
+}
+
+legend {
+    font-weight: bold;
+    color: #103526;
+}
+
+.button {
+    text-align: right;
+    margin-bottom: 1rem;
+}
+
+.cursor input {
+    cursor: pointer;
+}
+
+.gridcontainer {
+    display: grid;
+    grid-template-columns: min-content auto;
+    gap: 0.8rem;
+}
+
+.cursor p {
+    text-align: left;
+    white-space: normal;
+}
+
+.nogrid label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+#delivery input, #invoice input, #delivery textarea {
+    max-width: 40ch;
+}
+
+#delivery #zipcode, #invoice #zipcode {
+    max-width: 6ch;
+}
+
+/*
+Färgpalett
+Ljusbeige: #f7f5ee;
+Mörkbeige: #e6dec5;
+Ljusgrön: #5fa085;
+Mellangrön: #467562;
+Mörkgrön: #103526;
+*/
 
 /* Stil för footer */
 footer {
@@ -305,7 +364,7 @@ footer a {
     text-decoration: none;
     font-weight: bold;
     border-radius: 50px;
-    box-shadow: 5px 5px 5px #301616;
+    box-shadow: 5px 5px 5px #808080;
 }
 
 footer a:link, footer a:visited {
@@ -397,12 +456,8 @@ aside {
         "footer footer footer footer";
     }
 
-    #imgcontainer img {
+    #aboutcontainer img {
         max-width: 90%;
-    }
-
-    #containershop {
-        padding: 1rem 1rem;
     }
 
     aside {
@@ -414,6 +469,11 @@ aside {
     .floatcontainer {
         float: none;
         text-align: center;
+    }
+
+    .gridcontainer {
+        grid-template-columns: auto;
+        gap: 0.5rem;
     }
 }
 
@@ -461,6 +521,18 @@ aside {
 
     body {
         display: block;
+    }
+
+    .gridcontainer {
+        grid-template-columns: min-content auto;
+        gap: 0.8rem;
+    }
+}
+
+@media screen and (max-width: 460px) {
+    .gridcontainer {
+        grid-template-columns: auto;
+        gap: 0.5rem;
     }
 }
 

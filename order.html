@@ -38,7 +38,69 @@
         </ul>
     </nav>
     <main>
-        
+        <h1>Beställ</h1>
+        <p class="text">Vill du beställa abonnemang på grönsakskasse? Fyll i nedanstående formulär och klicka på <i>Skicka beställning</i>, så kommer din första grönsakskasse nästföljande måndag!</p>
+        <form>
+            <fieldset class="cursor">
+                <legend>Storlek</legend>
+                <div class="nogrid">
+                    <label><input type="radio" name="size" value="small"> Liten (1-2 personer)</label>
+                    <label><input type="radio" name="size" value="medium" checked> Mellan (3-4 personer)</label>
+                    <label><input type="radio" name="size" value="large"> Stor (> 4 personer)</label>
+                </div>
+            </fieldset>
+            <fieldset class="cursor">
+                <legend>Intervall</legend>
+                <div class="nogrid">
+                    <label><input type="radio" name="interval" value="everyWeek" checked> 1 gång i veckan</label>
+                    <label><input type="radio" name="interval" value="everyOtherWeek"> Varannan vecka</label>
+                    <label><input type="radio" name="interval" value="everyMonth"> En gång i månaden</label>
+                </div>
+            </fieldset>
+            <fieldset id="delivery">
+                <legend>Leverans</legend>
+                <div class="gridcontainer">
+                    <label for="name">För- och efternamn</label>
+                    <input type="text" name="name" id="name" required>
+                    <label for="address">Gatuadress</label>
+                    <input type="text" name="address" id="address" required>
+                    <label for="zipcode">Postnummer</label>
+                    <input type="text" name="zipcode" id="zipcode" required>
+                    <label for="city">Ort</label>
+                    <input type="text" name="city" id="city" required>
+                    <label for="phone">Telefonnummer</label>
+                    <input type="text" name="phone" id="phone" required>
+                    <label for="deliveryinfo">Information till bud</label>
+                    <textarea name="deliveryinfo" id="deliveryinfo" rows="3">T.ex. ringklocka trasig, får lämnas utanför dörren etc.</textarea>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Fakturering</legend>
+                <div class="gridcontainer" id="invoice">
+                    <label for="name">För- och efternamn</label>
+                    <input type="text" name="name" id="name" required>
+                    <label for="address">Gatuadress</label>
+                    <input type="text" name="address" id="address" required>
+                    <label for="zipcode">Postnummer</label>
+                    <input type="text" name="zipcode" id="zipcode" required>
+                    <label for="city">Ort</label>
+                    <input type="text" name="city" id="city" required>
+                    <label for="email">E-postadress</label>
+                    <input type="email" name="email" id="email" required>
+                </div>
+                <div class="cursor nogrid">
+                    <p>Önskar du få fakturan via e-post eller vanlig post?</p>
+                    <label><input type="radio" name="invoice" value="email" checked> E-post</label>
+                    <label><input type="radio" name="invoice" value="mail"> Post</label>
+                </div>
+            </fieldset>
+            <div class="button cursor">
+                <input type="reset" value="Ångra">
+            </div>
+            <div class="button cursor">
+                <input type="submit" value="Skicka beställning">
+            </div>
+        </form>
     </main>
     <aside></aside>
     <footer>
