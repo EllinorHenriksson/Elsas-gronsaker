@@ -8,7 +8,6 @@ html, body {
     height: 100%;
 }
 
-/* Kolla om nedanstående element faktiskt finns representerade på sidorna */
 html, body, nav, header, main, aside, footer, section, div, figure {
     margin: 0;
     padding: 0;
@@ -24,6 +23,8 @@ body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+/* Stil för header */
+
 header img {
     max-width: 100%;
     display: block;
@@ -31,7 +32,6 @@ header img {
 }
 
 /* Stil för navigering */
-
 #globalNav {
     display: flex;
     flex-direction: row;
@@ -126,7 +126,7 @@ main h1, main h2, main h3, main p {
     text-align: center;
 }
 
-main h1, main h2 {
+main h1, main h2, main h3 {
     color: #467562;
 }
 
@@ -286,7 +286,7 @@ section img {
     clear: right;
 }
 
-form {
+#orderform, #contactform {
     margin: 2rem;
 }
 
@@ -327,7 +327,7 @@ legend {
     margin-bottom: 0.5rem;
 }
 
-#delivery input, #invoice input, #delivery textarea {
+#delivery input, #invoice input, #delivery textarea, #contact input {
     max-width: 40ch;
 }
 
@@ -335,14 +335,9 @@ legend {
     max-width: 6ch;
 }
 
-/*
-Färgpalett
-Ljusbeige: #f7f5ee;
-Mörkbeige: #e6dec5;
-Ljusgrön: #5fa085;
-Mellangrön: #467562;
-Mörkgrön: #103526;
-*/
+#contact textarea {
+    max-width: 100ch;
+}
 
 /* Stil för footer */
 footer {
@@ -385,7 +380,7 @@ footer img {
     transform: translateY(-50%);
 }
 
-/*Layout*/
+/* Layout */
 body {
     display: grid;
     grid-template-columns: auto auto;
@@ -415,11 +410,12 @@ footer {
 
 aside {
     grid-area: aside;
+    align-self: center;
 }
 
-/*Media queries*/
+/* Media queries */
 
-/*Navigering och layout*/
+/* Navigering och layout */
 @media screen and (max-width: 800px) {
     #globalNav {
         flex-direction: column;
@@ -477,7 +473,7 @@ aside {
     }
 }
 
-/*Navigering och layout*/
+/* Navigering och layout */
 @media screen and (max-width: 600px) {
     #menuicon {
     display: block;
@@ -529,6 +525,7 @@ aside {
     }
 }
 
+/* Layout */
 @media screen and (max-width: 460px) {
     .gridcontainer {
         grid-template-columns: auto;
@@ -536,7 +533,7 @@ aside {
     }
 }
 
-/*Footer*/
+/* Footer */
 @media screen and (max-width: 400px) {
     footer {
         position: static;
@@ -571,9 +568,7 @@ Mörkgrön: #103526;
 
 /*
 Entiteter
-Liten pil upp: 25B4
 Liten pil ned: 25BE
-Stor pil ned: 25BC
 Kryss: 00D7
 */
 

@@ -38,7 +38,38 @@
         </ul>
     </nav>
     <main>
-
+        <h1>Kontakt</h1>
+        <p class="text">Vill ni kommma i kontakt med oss? Använd er av kontaktuppgifterna nedan eller fyll i kontaktformuläret och klicka på <i>Skicka</i>, så återkopplar vi till er så snart som möjligt.</p>
+        <div id="contactdetails">
+            <h2>Kontaktuppgifter</h2>
+            <h3>Adress</h3>
+            <p>Elsas Grönsaker</p>
+            <p>Listergården 1</p>
+            <p>294 91 Sölvesborg</p>
+            <h3>Telefonnummer</h3>
+            <p>075-785 96 25</p>
+            <h3>Mailadress</h3>
+            <p>elsasgronsaker@gmail.com</p>
+        </div>
+        <form id="contactform">
+            <fieldset id="contact">
+                <legend>Kontaktformulär</legend>
+                <div class="gridcontainer">
+                    <label for="name">För- och efternamn </label>
+                    <input type="text" id="name" name="name" required>
+                    <label for="email">E-postadress </label>
+                    <input type="email" id="email" name="email" required>
+                    <label for="message">Meddelande </label>
+                    <textarea name="message" id="message" rows="20" required></textarea>
+                </div>
+            </fieldset>
+            <div class="button cursor">
+                <input type="reset" value="Ångra">
+            </div>
+            <div class="button cursor">
+                <input type="submit" value="Skicka">
+            </div>
+        </form>
     </main>
     <aside></aside>
     <footer>
