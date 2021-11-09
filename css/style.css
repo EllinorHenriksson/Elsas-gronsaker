@@ -140,7 +140,7 @@ main h1, main h2, main h3 {
     font-size: 1.4rem;
 }
 
-section {
+#sectioncontainer {
     margin-top: 3rem;
     margin-bottom: 3rem;
     display: flex;
@@ -149,16 +149,16 @@ section {
     justify-content: space-evenly;
 }
 
-section div {
+#sectioncontainer div {
     position: relative;
     max-width: 250px;
 }
 
-section img {
+#sectioncontainer img {
     max-width: 100%;
 }
 
-#banner {
+.banner {
     position: absolute;
     bottom: 0px;
     left: 0px;
@@ -166,7 +166,7 @@ section img {
     background-color: hsla(47, 36%, 95%, 0.692);
 }
 
-#banner p {
+.banner p {
     font-weight: bold;
     color: #103526;
     text-align: center;
@@ -331,7 +331,7 @@ legend {
     max-width: 40ch;
 }
 
-#delivery #zipcode, #invoice #zipcode {
+#delivery #zipcodeDelivery, #invoice #zipcodeInvoice {
     max-width: 6ch;
 }
 
