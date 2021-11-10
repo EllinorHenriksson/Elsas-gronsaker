@@ -23,8 +23,51 @@ body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-/* Stil för header */
+/* Stil för ingångssidan */
+#entry {
+    display: block;
+    padding: 0;
+    background-image: url(../img/start.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
 
+#entry main {
+    background-color: #f7f5eeb9;
+    padding: 2rem 0;
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+}
+
+#entry a {
+    padding: 1rem;
+    background-color: #467562;
+    font-weight: bold;
+    text-decoration: none;
+    color: #e6dec5;
+    box-shadow: 5px 5px 5px #808080;
+    display: inline-block;
+    max-width: min-content;
+    white-space: nowrap;
+    margin: 1rem;
+}
+
+#entry a:link, #entry a:visited {
+    color: #e6dec5;
+}
+
+#entry a:hover, #entry a:active {
+    box-shadow: none;
+    position: relative;
+    left: 5px;
+    top: 5px;
+}
+
+/* Stil för header */
 header img {
     max-width: 100%;
     display: block;
@@ -553,6 +596,13 @@ aside {
         margin-left: 50%;
         margin-top: 1rem;
         transform: translateX(-50%);
+    }
+}
+
+/* Ingångssidan */
+@media screen and (max-width: 245px) {
+    #entry a {
+        white-space: normal;
     }
 }
 
